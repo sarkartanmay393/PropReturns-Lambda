@@ -74,8 +74,12 @@ export default function Home() {
         </div>
       </div>
       <div
+        id="backdrop"
+        className="hidden fixed top-0 min-h-screen w-screen z-10 bg-white backdrop-blur-lg opacity-50"
+      ></div>
+      <div
         className={cn(
-          "xl:hidden fixed bottom-2 w-full",
+          "xl:hidden fixed bottom-2 w-full z-50",
           selectedProperties.length ? "" : "hidden"
         )}
       >

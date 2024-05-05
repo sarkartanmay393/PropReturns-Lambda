@@ -9,8 +9,12 @@ import { StoreContext } from "@/app/providers";
 const FilterBar: React.FC = () => {
   return (
     <div className="flex items-center space-x-4 p-2 sm:px-10 w-full bg-[#F8F9FB] overflow-x-scroll thin-scrollbar">
-      <CustomToggle label="Verified" image="/filters/verified.svg" />
-      <CustomToggle label="Any Price" image="/icons/anyprice.svg" />
+      <CustomToggle
+        label="Verified"
+        value="true"
+        image="/filters/verified.svg"
+      />
+      <CustomToggle label="Any Price" value="0" image="/icons/anyprice.svg" />
     </div>
   );
 };

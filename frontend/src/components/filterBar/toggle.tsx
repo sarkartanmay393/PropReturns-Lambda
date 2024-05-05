@@ -23,6 +23,7 @@ const CustomToggle: React.FC<ToggleProps> = ({ label, image, value = "" }) => {
       if (["0-150000", "150000-"].includes(value)) {
         if (filters.find((f) => f.name === "Any Price")) {
           const newFilters = [...filters.filter((f) => f.name !== "Any Price")];
+          console.log(newFilters);
           setFilters(newFilters);
           setPage(1);
           loadProperties({ comingFilters: newFilters, pageNo: 1 });
@@ -30,6 +31,7 @@ const CustomToggle: React.FC<ToggleProps> = ({ label, image, value = "" }) => {
         }
       }
       const newFilters = filters.filter((f) => f.name !== label);
+      console.log(newFilters);
       setFilters(newFilters);
       setPage(1);
       if (label === "Any Price") {
@@ -45,6 +47,7 @@ const CustomToggle: React.FC<ToggleProps> = ({ label, image, value = "" }) => {
             ...filters.filter((f) => f.name !== "Any Price"),
             { name: "Any Price", value: value },
           ];
+          console.log(newFilters);
           setFilters(newFilters);
           setPage(1);
           loadProperties({ comingFilters: newFilters, pageNo: 1 });
@@ -52,6 +55,7 @@ const CustomToggle: React.FC<ToggleProps> = ({ label, image, value = "" }) => {
         }
       }
       const newFilters = [...filters, { name: label, value: value }];
+      console.log(newFilters);
       setFilters(newFilters);
       setPage(1);
       if (label === "Any Price") {
@@ -67,7 +71,7 @@ const CustomToggle: React.FC<ToggleProps> = ({ label, image, value = "" }) => {
       className={cn(
         "px-4 text-sm py-1 flex items-center justify-center lg:px-2 gap-1 rounded-full font-normal border whitespace-nowrap",
         !image ? "lg:px-4" : "",
-        isActive ? "" : "bg-white"
+        isActive ? "border-gray-400" : "bg-white"
       )}
     >
       {image ? (

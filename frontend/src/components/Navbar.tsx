@@ -56,7 +56,7 @@ export default Navbar;
 
 const SearchBar: React.FC<SearchBarProps> = ({ placeholder }) => {
   return (
-    <div className="flex items-center border border-gray-200 rounded-full w-[320px] lg:w-[480px] px-2 h-[44px]">
+    <div className="flex items-center border border-gray-200 rounded-full sm:w-[320px] lg:w-[480px] px-2 h-[44px]">
       <Image src="/search.svg" width={18} height={18} alt="Search Icon" />
       <Input
         type="text"
