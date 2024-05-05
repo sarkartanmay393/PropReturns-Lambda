@@ -3,7 +3,6 @@
 import React from "react";
 import { Button } from "./ui/button";
 import Image from "next/image";
-import { Property } from "@/app/page";
 
 interface Props {
   items: Property[];
@@ -71,6 +70,7 @@ const SelectedPropertyCard: React.FC<{ item: Property }> = ({ item }) => {
 };
 
 import { cn } from "@/lib/utils";
+import { Property } from "@/lib/types";
 
 export const ShortlistDropdown: React.FC<Props> = ({ items }) => {
   const [isOpen, setIsOpen] = React.useState(false);
