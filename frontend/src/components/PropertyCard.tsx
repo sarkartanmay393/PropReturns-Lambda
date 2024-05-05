@@ -46,9 +46,9 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
     <div className=" rounded-2xl border overflow-hidden lg:w-[810px] lg:h-[290px] flex flex-col sm:flex-row">
       <div className="relative sm:w-1/3 lg:w-[45%]">
         <Image
+          priority
           placeholder="blur"
           blurDataURL="/placeholderBlur.jpeg"
-          loading="lazy"
           src={imageUrl}
           alt={`Property ${address}`}
           width={400}
